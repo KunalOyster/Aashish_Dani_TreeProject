@@ -19,17 +19,23 @@ public class BlipparWindow : EditorWindow
 
     #region PrivateField
     private string sdkPath = "sdk/blippar-webar-sdk-v1.4.7/webar-sdk/webar-sdk-v1.4.7.min.js";
-    private string defaultLicense = "xxxx-1111-2222-3333-yyyy";    private string defaultDomainName = "https://xxxx.yyy";    private string defaultPath = "sdk/blippar-webar-sdk-v1.4.7/webar-sdk/webar-sdk-v1.4.7.min.js";
+    private string defaultLicense = "xxxx-1111-2222-3333-yyyy";
+    private string defaultDomainName = "https://xxxx.yyy";
+    private string defaultPath = "sdk/blippar-webar-sdk-v1.4.7/webar-sdk/webar-sdk-v1.4.7.min.js";
     private string saveFile = "Assets/webarSDK/Resources/CustomData.json";
 
     private string defaultBuildLocation;
     private string buildLocation;
-    private string applicationDataPath;    private string buildPath;
+    private string applicationDataPath;
+    private string buildPath;
     private string projectNameBuild;
 
     private bool build = false;
     private bool autoMrkrdetection = true;
-    private bool autoStart = true;    private bool autoInit = true;    private bool staticCamera = true;    private bool setAutoScale = true;
+    private bool autoStart = true;
+    private bool autoInit = true;
+    private bool staticCamera = true;
+    private bool setAutoScale = true;
 
     private int ListSize;
 
@@ -42,7 +48,9 @@ public class BlipparWindow : EditorWindow
 
     #region PublicField
     public string[] options = new string[] { "None", "Surface Tracking", "Marker Tracking" };
-    public int index = 0;    public UnityEngine.Object myCamera;    public UnityEngine.Object myStage;
+    public int index = 0;
+    public UnityEngine.Object myCamera;
+    public UnityEngine.Object myStage;
     #endregion
 
     #region ReferenceField
@@ -56,18 +64,50 @@ public class BlipparWindow : EditorWindow
     #endregion
 
     #region MenuItems
-    [MenuItem("Blippar/ Settings")]    public static void showLisanceWindow()    {        GetWindow<BlipparWindow>("Blippar");    }    [MenuItem("Blippar/Webar Object/Camera")]    public static void addBlipparCamera()    {         GameObject obj = Instantiate(Resources.Load("webarCamera")) as GameObject;        obj.name = "webarCamera";    }
+    [MenuItem("Blippar/ Settings")]
+    public static void showLisanceWindow()
+    {
+        GetWindow<BlipparWindow>("Blippar");
+    }
 
-    [MenuItem("Blippar/Webar Object/Manager")]    public static void addBlipparManager()    {        GameObject obj = Instantiate(Resources.Load("webarManager"), new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0)) as GameObject;        obj.name = "webarManager";    }
+    [MenuItem("Blippar/Webar Object/Camera")]
+    public static void addBlipparCamera()
+    { 
+        GameObject obj = Instantiate(Resources.Load("webarCamera")) as GameObject;
+        obj.name = "webarCamera";
+    }
 
-    [MenuItem("Blippar/Webar Object/Stage")]    public static void addBlipparStage()    {        GameObject obj = Instantiate(Resources.Load("webarStage"), new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0)) as GameObject;        obj.name = "webarStage";    }
+    [MenuItem("Blippar/Webar Object/Manager")]
+    public static void addBlipparManager()
+    {
+        GameObject obj = Instantiate(Resources.Load("webarManager"), new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0)) as GameObject;
+        obj.name = "webarManager";
+    }
 
-    [MenuItem("Blippar/Webar Object/Marker")]    public static void addBlipparMarker()    {        GameObject obj = Instantiate(Resources.Load("webarMarker"), new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0)) as GameObject;        markerCount = markerCount + 1;        obj.name = "webarMarker" + markerCount;
+    [MenuItem("Blippar/Webar Object/Stage")]
+    public static void addBlipparStage()
+    {
+        GameObject obj = Instantiate(Resources.Load("webarStage"), new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0)) as GameObject;
+        obj.name = "webarStage";
+    }
 
-        string fileContents = File.ReadAllText("Assets/webarSDK/Editor/MarkerData/MarkerData.json");        var root = JsonUtility.FromJson<BlipparManager.MarkerMetadata>(fileContents);        obj.GetComponent<MarkerData>().markerDataList.Clear();        obj.GetComponent<MarkerData>().markerDataList.Add("Select Marker");        foreach (var marker in root.markMeta)
+    [MenuItem("Blippar/Webar Object/Marker")]
+    public static void addBlipparMarker()
+    {
+        GameObject obj = Instantiate(Resources.Load("webarMarker"), new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0)) as GameObject;
+        markerCount = markerCount + 1;
+        obj.name = "webarMarker" + markerCount;
+
+        string fileContents = File.ReadAllText("Assets/webarSDK/Editor/MarkerData/MarkerData.json");
+        var root = JsonUtility.FromJson<BlipparManager.MarkerMetadata>(fileContents);
+        obj.GetComponent<MarkerData>().markerDataList.Clear();
+        obj.GetComponent<MarkerData>().markerDataList.Add("Select Marker");
+        foreach (var marker in root.markMeta)
         {
             obj.GetComponent<MarkerData>().markerDataList.Add(marker);
-        }    }
+        }
+
+    }
     #endregion
 
     #region FileOperations
@@ -160,7 +200,8 @@ public class BlipparWindow : EditorWindow
 
         GUILayout.BeginHorizontal();
 
-        GUILayout.Label("WebAR SDK Path", /*EditorStyles.boldLabel,*/ GUILayout.MaxWidth(130));        sdkPath = GUILayout.TextField(sdkPath);
+        GUILayout.Label("WebAR SDK Path", /*EditorStyles.boldLabel,*/ GUILayout.MaxWidth(130));
+        sdkPath = GUILayout.TextField(sdkPath);
         GUILayout.EndHorizontal();
         GUILayout.Space(5);
 
@@ -241,7 +282,8 @@ public class BlipparWindow : EditorWindow
                     customData._selectedTracking = "None";
                 }
             }
-        }    }
+        }
+    }
 
     private void OnInspectorGUI(int index)
     {
@@ -561,7 +603,14 @@ public class BlipparWindow : EditorWindow
             }
             build = false;
             Debug.Log("### Build Process Completed ###");
-            if (report.summary.result.ToString() == "Succeeded")            {                EditorUtility.DisplayDialog("Congratulations", "Build completed successfully", "ok");            }            else            {                EditorUtility.DisplayDialog("Sorry", "Build not completed, check console log", "ok");            }
+            if (report.summary.result.ToString() == "Succeeded")
+            {
+                EditorUtility.DisplayDialog("Congratulations", "Build completed successfully", "ok");
+            }
+            else
+            {
+                EditorUtility.DisplayDialog("Sorry", "Build not completed, check console log", "ok");
+            }
             GUIUtility.ExitGUI();
             EditorApplication.Exit(1);
         }

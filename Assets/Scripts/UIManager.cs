@@ -4,14 +4,19 @@ public class UIManager : MonoBehaviour
 {
 
     public GameObject stage1,stage2,stage3,stage4,stage5,stage6,stage7,stage8,stage9;
+    public GameObject testAnimTree;
 
-
-    
     // panels
     public GameObject stagesPanel;
 
+    public void Start()
+    {
+        testAnimTree.SetActive(true);
+    }
+
     public void ActiveStage1()
     {
+        stage1.SetActive(true);
         stage1.SetActive(true);
         stage2.SetActive(false);
         stage3.SetActive(false);
@@ -21,6 +26,7 @@ public class UIManager : MonoBehaviour
         stage7.SetActive(false);
         stage8.SetActive(false);
         stage9.SetActive(false);
+        testAnimTree.SetActive(false);
     }
 
     public void ActiveStage2()
@@ -34,6 +40,7 @@ public class UIManager : MonoBehaviour
         stage7.SetActive(false);
         stage8.SetActive(false);
         stage9.SetActive(false);
+        testAnimTree.SetActive(false);
     }
 
     public void ActiveStage3()
@@ -47,6 +54,7 @@ public class UIManager : MonoBehaviour
         stage7.SetActive(false);
         stage8.SetActive(false);
         stage9.SetActive(false);
+        testAnimTree.SetActive(false);
     }
 
     public void ActiveStage4()
@@ -60,6 +68,7 @@ public class UIManager : MonoBehaviour
         stage7.SetActive(false);
         stage8.SetActive(false);
         stage9.SetActive(false);
+        testAnimTree.SetActive(false);
     }
 
     public void ActiveStage5()
@@ -73,6 +82,7 @@ public class UIManager : MonoBehaviour
         stage7.SetActive(false);
         stage8.SetActive(false);
         stage9.SetActive(false);
+        testAnimTree.SetActive(false);
     }
 
     public void ActiveStage6()
@@ -86,6 +96,7 @@ public class UIManager : MonoBehaviour
         stage7.SetActive(false);
         stage8.SetActive(false);
         stage9.SetActive(false);
+        testAnimTree.SetActive(false);
     }
 
     public void ActiveStage7()
@@ -99,6 +110,7 @@ public class UIManager : MonoBehaviour
         stage7.SetActive(true);
         stage8.SetActive(false);
         stage9.SetActive(false);
+        testAnimTree.SetActive(false);
     }
 
     public void ActiveStage8()
@@ -112,6 +124,7 @@ public class UIManager : MonoBehaviour
         stage7.SetActive(false);
         stage8.SetActive(true);
         stage9.SetActive(false);
+        testAnimTree.SetActive(false);
     }
 
     public void ActiveStage9()
@@ -125,6 +138,7 @@ public class UIManager : MonoBehaviour
         stage7.SetActive(false);
         stage8.SetActive(false);
         stage9.SetActive(true);
+        testAnimTree.SetActive(false);
     }
 
 

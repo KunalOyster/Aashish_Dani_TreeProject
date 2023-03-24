@@ -2149,6 +2149,7 @@ MonoBehaviour:
   stage7: {fileID: 5844276810003665623}
   stage8: {fileID: 1871017564793633842}
   stage9: {fileID: 4830363730234509582}
+  testAnimTree: {fileID: 0}
   stagesPanel: {fileID: 1808958827}
 --- !u!4 &850006068
 Transform:
