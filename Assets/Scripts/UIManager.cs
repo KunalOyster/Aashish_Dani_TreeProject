@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,9 +6,10 @@ public class UIManager : MonoBehaviour
 
     public GameObject stage1,stage2,stage3,stage4,stage5,stage6,stage7,stage8,stage9;
     public GameObject testAnimTree;
+    public GameObject infoDetailsPanel;
 
-    [Header("Panels")]
     // panels
+    [Header("Panels")]
     public GameObject stagesPanel;
     public GameObject infoPanel;
 
@@ -74,9 +74,6 @@ public class UIManager : MonoBehaviour
         testAnimTree.SetActive(false);
 
       
-
-
-
         // panels
         infoPanel.SetActive(false);
 
@@ -89,12 +86,10 @@ public class UIManager : MonoBehaviour
         middleStageBtn.image.sprite = unPressedmiddleStageImg;
         matureStageBtn.image.sprite = unPressedmatureStageImg;
         infoBtn.image.sprite = unPressedinfoImg;
-
     }
 
     public void ActiveStage2()
     {
-
         //
         detailsImage.SetActive(false);
         biogeographyImage.SetActive(false);
@@ -112,11 +107,7 @@ public class UIManager : MonoBehaviour
         testAnimTree.SetActive(false);
         infoPanel.SetActive(false);
 
-       
-
-
-
-
+   
         // button images
         detailsBtn.image.sprite = unPressedDetailsImg;
         biogeographyBtn.image.sprite = unPressedBiogeographyImg;
@@ -125,18 +116,14 @@ public class UIManager : MonoBehaviour
         middleStageBtn.image.sprite = pressedmiddleStageImg;
         matureStageBtn.image.sprite = unPressedmatureStageImg;
         infoBtn.image.sprite = unPressedinfoImg;
-
     }
 
     public void ActiveStage3()
     {
-
         //
         detailsImage.SetActive(false);
         biogeographyImage.SetActive(false);
         otherInfoImage.SetActive(false);
-
-
 
         stage1.SetActive(false);
         stage2.SetActive(false);
@@ -151,10 +138,6 @@ public class UIManager : MonoBehaviour
         infoPanel.SetActive(false);
 
        
-
-
-
-
         // button images
         detailsBtn.image.sprite = unPressedDetailsImg;
         biogeographyBtn.image.sprite = unPressedBiogeographyImg;
@@ -163,12 +146,11 @@ public class UIManager : MonoBehaviour
         middleStageBtn.image.sprite = unPressedmiddleStageImg;
         matureStageBtn.image.sprite = pressedmatureStageImg;
         infoBtn.image.sprite = unPressedinfoImg;
-
     }
 
+    #region notused code
     //public void ActiveStage4()
     //{
-
     //    //
     //    detailsImage.SetActive(false);
     //    biogeographyImage.SetActive(false);
@@ -186,11 +168,6 @@ public class UIManager : MonoBehaviour
     //    testAnimTree.SetActive(false);
     //    infoPanel.SetActive(false);
 
-
-        
-
-
-
     //    // button images
     //    detailsBtn.image.sprite = unPressedDetailsImg;
     //    biogeographyBtn.image.sprite = unPressedBiogeographyImg;
@@ -199,18 +176,14 @@ public class UIManager : MonoBehaviour
     //    middleStageBtn.image.sprite = unPressedmiddleStageImg;
     //    matureStageBtn.image.sprite = unPressedmatureStageImg;
     //    infoBtn.image.sprite = unPressedinfoImg;
-
-
     //}
 
     //public void ActiveStage5()
     //{
-
     //    //
     //    detailsImage.SetActive(false);
     //    biogeographyImage.SetActive(false);
     //    otherInfoImage.SetActive(false);
-
 
     //    stage1.SetActive(false);
     //    stage2.SetActive(false);
@@ -225,10 +198,6 @@ public class UIManager : MonoBehaviour
     //    infoPanel.SetActive(false);
 
 
-       
-
-
-
     //    // button images
     //    detailsBtn.image.sprite = unPressedDetailsImg;
     //    biogeographyBtn.image.sprite = unPressedBiogeographyImg;
@@ -237,17 +206,15 @@ public class UIManager : MonoBehaviour
     //    middleStageBtn.image.sprite = unPressedmiddleStageImg;
     //    matureStageBtn.image.sprite = unPressedmatureStageImg;
     //    infoBtn.image.sprite = unPressedinfoImg;
-
     //}
+
 
     //public void ActiveStage6()
     //{
-
     //    //
     //    detailsImage.SetActive(false);
     //    biogeographyImage.SetActive(false);
     //    otherInfoImage.SetActive(false);
-
 
     //    stage1.SetActive(false);
     //    stage2.SetActive(false);
@@ -262,10 +229,6 @@ public class UIManager : MonoBehaviour
     //    infoPanel.SetActive(false);
 
 
-        
-
-
-
     //    // button images
     //    detailsBtn.image.sprite = unPressedDetailsImg;
     //    biogeographyBtn.image.sprite = unPressedBiogeographyImg;
@@ -274,7 +237,6 @@ public class UIManager : MonoBehaviour
     //    middleStageBtn.image.sprite = unPressedmiddleStageImg;
     //    matureStageBtn.image.sprite = unPressedmatureStageImg;
     //    infoBtn.image.sprite = unPressedinfoImg;
-
     //}
 
     //public void ActiveStage7()
@@ -297,11 +259,6 @@ public class UIManager : MonoBehaviour
     //    testAnimTree.SetActive(false);
     //    infoPanel.SetActive(false);
 
-
-        
-
-
-
     //    // button images
     //    detailsBtn.image.sprite = unPressedDetailsImg;
     //    biogeographyBtn.image.sprite = unPressedBiogeographyImg;
@@ -310,12 +267,10 @@ public class UIManager : MonoBehaviour
     //    middleStageBtn.image.sprite = unPressedmiddleStageImg;
     //    matureStageBtn.image.sprite = unPressedmatureStageImg;
     //    infoBtn.image.sprite = unPressedinfoImg;
-
     //}
 
     //public void ActiveStage8()
     //{
-
     //    //
     //    detailsImage.SetActive(false);
     //    biogeographyImage.SetActive(false);
@@ -333,10 +288,6 @@ public class UIManager : MonoBehaviour
     //    testAnimTree.SetActive(false);
     //    infoPanel.SetActive(false);
 
-
-        
-
-
     //    // button images
     //    detailsBtn.image.sprite = unPressedDetailsImg;
     //    biogeographyBtn.image.sprite = unPressedBiogeographyImg;
@@ -345,12 +296,10 @@ public class UIManager : MonoBehaviour
     //    middleStageBtn.image.sprite = unPressedmiddleStageImg;
     //    matureStageBtn.image.sprite = unPressedmatureStageImg;
     //    infoBtn.image.sprite = unPressedinfoImg;
-
     //}
 
     //public void ActiveStage9()
     //{
-
     //    //
     //    detailsImage.SetActive(false);
     //    biogeographyImage.SetActive(false);
@@ -368,10 +317,6 @@ public class UIManager : MonoBehaviour
     //    testAnimTree.SetActive(false);
     //    infoPanel.SetActive(false);
 
-
-        
-
-
     //    // button images
     //    detailsBtn.image.sprite = unPressedDetailsImg;
     //    biogeographyBtn.image.sprite = unPressedBiogeographyImg;
@@ -380,9 +325,8 @@ public class UIManager : MonoBehaviour
     //    middleStageBtn.image.sprite = unPressedmiddleStageImg;
     //    matureStageBtn.image.sprite = unPressedmatureStageImg;
     //    infoBtn.image.sprite = unPressedinfoImg;
-
     //}
-
+    #endregion
 
     // Activate Images
 
@@ -399,7 +343,6 @@ public class UIManager : MonoBehaviour
         matureStageBtn.image.sprite = unPressedmatureStageImg;
         stageBtn.image.sprite = unPressedStageImg;
         infoBtn.image.sprite = pressedinfoImg;
-
     }
 
     public void ActiveBiogeoprahy()
@@ -433,11 +376,6 @@ public class UIManager : MonoBehaviour
     }
 
 
-
-
-
-
-
     // All the panels are below this
     public void ActiveStagesPanel()
     {
@@ -468,11 +406,13 @@ public class UIManager : MonoBehaviour
             otherInfoImage.SetActive(false);
             biogeographyImage.SetActive(false);
             detailsImage.SetActive(false);
+            infoDetailsPanel.SetActive(false);
             infoBtn.image.sprite = unPressedinfoImg;
         }
         else
         {
             stagesPanel.SetActive(false);
+            infoDetailsPanel.SetActive(true);
             infoPanel.SetActive(true);
             infoBtn.image.sprite = pressedinfoImg;
             stageBtn.image.sprite = unPressedStageImg;
