@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
 
-    public GameObject stage1,stage2,stage3,stage4,stage5,stage6,stage7,stage8,stage9;
+    public GameObject stage1, stage2, stage3; //,stage4,stage5,stage6,stage7,stage8,stage9;
     public GameObject testAnimTree;
     public GameObject infoDetailsPanel;
 
@@ -65,12 +65,12 @@ public class UIManager : MonoBehaviour
         stage1.SetActive(true);
         stage2.SetActive(false);
         stage3.SetActive(false);
-        stage4.SetActive(false);
-        stage5.SetActive(false);
-        stage6.SetActive(false);
-        stage7.SetActive(false);
-        stage8.SetActive(false);
-        stage9.SetActive(false);
+        //stage4.SetActive(false);
+        //stage5.SetActive(false);
+        //stage6.SetActive(false);
+        //stage7.SetActive(false);
+        //stage8.SetActive(false);
+        //stage9.SetActive(false);
         testAnimTree.SetActive(false);
 
       
@@ -98,12 +98,12 @@ public class UIManager : MonoBehaviour
         stage1.SetActive(false);
         stage2.SetActive(true);
         stage3.SetActive(false);
-        stage4.SetActive(false);
-        stage5.SetActive(false);
-        stage6.SetActive(false);
-        stage7.SetActive(false);
-        stage8.SetActive(false);
-        stage9.SetActive(false);
+        //stage4.SetActive(false);
+        //stage5.SetActive(false);
+        //stage6.SetActive(false);
+        //stage7.SetActive(false);
+        //stage8.SetActive(false);
+        //stage9.SetActive(false);
         testAnimTree.SetActive(false);
         infoPanel.SetActive(false);
 
@@ -128,12 +128,12 @@ public class UIManager : MonoBehaviour
         stage1.SetActive(false);
         stage2.SetActive(false);
         stage3.SetActive(true);
-        stage4.SetActive(false);
-        stage5.SetActive(false);
-        stage6.SetActive(false);
-        stage7.SetActive(false);
-        stage8.SetActive(false);
-        stage9.SetActive(false);
+        //stage4.SetActive(false);
+        //stage5.SetActive(false);
+        //stage6.SetActive(false);
+        //stage7.SetActive(false);
+        //stage8.SetActive(false);
+        //stage9.SetActive(false);
         testAnimTree.SetActive(false);
         infoPanel.SetActive(false);
 

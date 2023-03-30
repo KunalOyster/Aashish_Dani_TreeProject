@@ -1,9 +1,34 @@
 fileFormatVersion: 2
-guid: 458767f0f43cf09409e00da12e377cb8
+guid: 5b3eed585afeeab459908058ff08a633
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Bark01
+    second: {fileID: 2100000, guid: c6e1699cbb2f7454e93b817d98a5b066, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Fruits02
+    second: {fileID: 2100000, guid: 4d3dd7e427de9974895fc43ca352b32d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Leaves01
+    second: {fileID: 2100000, guid: 1c204bd112cf67143bfba255bad939a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Leaves02
+    second: {fileID: 2100000, guid: 56b9e40512c606d4b96c115af0c52c1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Leaves03
+    second: {fileID: 2100000, guid: 99f5b9ff587b0cc49b75975d870876f7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
