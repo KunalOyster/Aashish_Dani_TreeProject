@@ -186,7 +186,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
+  m_HDR: 0
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
@@ -1458,12 +1458,6 @@ MonoBehaviour:
   stage1: {fileID: 2852228485321863885}
   stage2: {fileID: 6831318412223146440}
   stage3: {fileID: 8947176050984473360}
-  stage4: {fileID: 0}
-  stage5: {fileID: 0}
-  stage6: {fileID: 0}
-  stage7: {fileID: 0}
-  stage8: {fileID: 0}
-  stage9: {fileID: 0}
   testAnimTree: {fileID: 346025463578542451}
   infoDetailsPanel: {fileID: 1346548097}
   stagesPanel: {fileID: 1808958827}
